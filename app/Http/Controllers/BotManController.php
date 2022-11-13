@@ -19,8 +19,11 @@ class BotManController extends Controller
             if ($message == 'Hi') {
                 $this->askName($botman);
             }
-            if ($message == '1') {
+            elseif ($message == '1') {
                 $this->askPin($botman);
+            }
+            elseif ($message == '2') {
+                $this->comingsoon($botman);
             }
             
             else{
@@ -43,6 +46,16 @@ class BotManController extends Controller
    
             $this->say('Nice to meet you '.$name);
         });
+    }
+    public function comingsoon($botman)
+    {
+        //$botman->ask('Hello! What is your Name?', function(Answer $answer) 
+        
+   
+            //$name = $answer->getText();
+   
+            $this->say('This service is not yet available');
+        ;
     }
 
 
